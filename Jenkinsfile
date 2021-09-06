@@ -20,6 +20,7 @@ pipeline {
           enabledForFailure: true, aggregatingResults: true, 
           tools: [java(), checkStyle(pattern: '**/build/**/main.xml', reportEncoding: 'UTF-8')]
         )
+        recordIssues tool: java(pattern: '*.log'), healthy: 10, unhealthy: 100, minimumSeverity: 'HIGH'
     }
   }
 }
