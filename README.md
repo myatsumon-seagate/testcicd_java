@@ -1,2 +1,1 @@
-# testcicd_java
-
+# multibranch-sample-app
